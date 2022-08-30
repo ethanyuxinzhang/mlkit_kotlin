@@ -415,7 +415,7 @@ class StillImageActivity : AppCompatActivity() {
             "Using Custom Object Detector Processor"
           )
           val localModel = LocalModel.Builder()
-            .setAssetFilePath("custom_models/object_labeler.tflite")
+            .setAssetFilePath(getString(R.string.tflite_file_path))
             .build()
           val customObjectDetectorOptions =
             PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel)
@@ -478,7 +478,7 @@ class StillImageActivity : AppCompatActivity() {
             "Using Custom Image Label Detector Processor"
           )
           val localClassifier = LocalModel.Builder()
-            .setAssetFilePath("custom_models/bird_classifier.tflite")
+            .setAssetFilePath(getString(R.string.tflite_file_path))
             .build()
           val customImageLabelerOptions =
             CustomImageLabelerOptions.Builder(localClassifier).build()

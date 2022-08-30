@@ -261,7 +261,7 @@ class CameraXLivePreviewActivity :
           OBJECT_DETECTION_CUSTOM -> {
             Log.i(TAG, "Using Custom Object Detector (with object labeler) Processor")
             val localModel =
-              LocalModel.Builder().setAssetFilePath("custom_models/object_labeler.tflite").build()
+              LocalModel.Builder().setAssetFilePath(getString(R.string.tflite_file_path)).build()
             val customObjectDetectorOptions =
               PreferenceUtils.getCustomObjectDetectorOptionsForLivePreview(this, localModel)
             ObjectDetectorProcessor(this, customObjectDetectorOptions)
@@ -313,7 +313,7 @@ class CameraXLivePreviewActivity :
           IMAGE_LABELING_CUSTOM -> {
             Log.i(TAG, "Using Custom Image Label (Birds) Detector Processor")
             val localClassifier =
-              LocalModel.Builder().setAssetFilePath("custom_models/bird_classifier.tflite").build()
+              LocalModel.Builder().setAssetFilePath(getString(R.string.tflite_file_path)).build()
             val customImageLabelerOptions =
               CustomImageLabelerOptions.Builder(localClassifier).build()
             LabelDetectorProcessor(this, customImageLabelerOptions)

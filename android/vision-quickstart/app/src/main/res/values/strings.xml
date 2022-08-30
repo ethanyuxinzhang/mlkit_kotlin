@@ -152,4 +152,7 @@
     <string name="pref_title_segmentation_raw_size_mask" translatable="false">Enable raw size mask</string>
     <string name="pref_key_segmentation_raw_size_mask" translatable="false">srsm</string>
 
+    <!-- Strings for testing. -->
+    <string name="tflite_file_path" translatable="false">custom_models/ckpt_r50x1_extra_labels_1.tflite</string>
+
 </resources>
